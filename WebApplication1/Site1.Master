@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        #grid{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .head{
+            grid-column: 1/ span 2;
+            align-self:center;
+            color: #43b7ac;
+            text-align: center;
+        }
+        .logo {
+            height: 388px;
+        }
+        article,#ContentPlaceHolder1{
+            align-self: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <main id="grid">
+            <header class="head">اهلا وسهلا</header>
+            <img alt="" class="logo" src="images/380485%20(1).jpg" />
+            <article>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder></article>
+        </main>
+    </form>
+</body>
+</html>
